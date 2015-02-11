@@ -32,7 +32,7 @@ def traditional(degree=None, abbr=None):
 
 
 def abbr(degree):
-    return _by_degree('abbreviation', degree)
+    return _by_degree('abbr', degree)
 
 
 def degrees(abbr):
