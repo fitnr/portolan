@@ -47,7 +47,11 @@ portolan.middle('SEbS')
 portolan.range('SEbS')
 # (140.625, 151.875)
 
-# the degrees method returns the minimum, middle, and maximum of a range
+# Remember that North spans the origin
+portolan.range('n')
+# (354.375, 5.625)
+
+# the degrees method returns the minimum, middle, and maximum of a compass point
 portolan.degrees('SEbS')
 # (140.625, 146.25, 151.875)
 ````
