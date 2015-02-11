@@ -2,10 +2,10 @@ from .data import ABBRS, SEGMENTS
 
 
 def _by_(key, degree=None, abbr=None):
-    if not any([degree, abbr]):
+    if None not in (degree, abbr):
         raise ValueError("Requires an argument")
 
-    if degree:
+    if degree is not None:
         return _by_degree(key, degree)
 
     if abbr:
