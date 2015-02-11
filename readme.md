@@ -19,10 +19,10 @@ Convert from abbreviations or a decimal degree to the compass point:
 import portolan
 
 portolan.point(abbr='nnw')
-# 'North-northwest'
+# 'north-northwest'
 
 portolan.point(degree=275.1)
-# 'West'
+# 'west'
 ````
 
 Convert to traditional names of the Mediterranean basin:
