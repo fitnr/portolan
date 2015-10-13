@@ -1,27 +1,31 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+# This file is part of portolan.
+# http://github.com/fitnr/portolan
+
+# Licensed under the GPLv3 license:
+# http://http://opensource.org/licenses/GPL-3.0
+# Copyright (c) 2015, Neil Freeman <contact@fakeisthenewreal.org>
+
 from setuptools import setup
 
-def read_md(f):
+try:
+    readme = open('README.rst').read()
+except IOError:
     try:
-        try:
-            from pypandoc import convert
-            return convert(f, 'rst')
-
-        except ImportError:
-            print("pypandoc not found, could not convert Markdown to RST")
-            return open(f, 'r').read()
-
-    except (IOError, RuntimeError):
-        print("Could not read readme.md")
-        return ''
+        readme = open('README.md').read()
+    except IOError:
+        readme = ''
 
 setup(
     name='portolan',
 
-    version='1.0',
+    version='1.0.1',
 
     description="Convert between compass points and degrees",
 
-    long_description=read_md('readme.md'),
+    long_description=readme,
 
     url='https://github.com/fitnr/portolan',
 
